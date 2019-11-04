@@ -1,0 +1,12 @@
+﻿@model IEnumerable<FastQuery.Models.User>
+@{
+    ViewBag.Title = "Users";
+}
+<a asp-action="Create">Add User</a>
+<table class="table">
+    <tr><td>Name</td><td>Surname</td><td>Patronomic</td><td>Email</td><td>Password</td><td>Phone</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.Name</td><td>@item.Surname</td><td>@item.Patronomic</td><td>@item.Email</td><td>@item.Password</td><td>@item.Phone</td></tr>
+    }
+</table>
